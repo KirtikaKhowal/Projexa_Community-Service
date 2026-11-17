@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { Home, LayoutDashboard } from 'lucide-react';
 import { ToastProvider } from './components/ui/Toast';
 import Navbar from './components/Navbar';
@@ -92,11 +92,11 @@ function ComingSoonPage({ label, setActivePage }) {
 
 /* ── Page labels for sidebar pages ── */
 const PAGE_LABELS = {
-  donors:             'Donors',
-  donations:          'Donations',
+  donors: 'Donors',
+  donations: 'Donations',
   'blood-collection': 'Blood Collection',
-  settings:           'Settings',
-  reports:            'Reports',
+  settings: 'Settings',
+  reports: 'Reports',
 };
 
 /* ── Root App ── */
@@ -228,7 +228,7 @@ export default function App() {
     if (activePage === 'contribute') {
       return (
         <SidebarLayout activePage={activePage} setActivePage={setActivePage}>
-          <FinancialContribution onSuccess={() => {}} />
+          <FinancialContribution onSuccess={() => { }} />
         </SidebarLayout>
       );
     }
@@ -266,7 +266,7 @@ export default function App() {
         <SidebarLayout activePage={activePage} setActivePage={setActivePage}>
           <DonationSuccess
             onViewDonations={() => setActivePage('registrations')}
-            onShare={() => {}}
+            onShare={() => { }}
           />
         </SidebarLayout>
       );
